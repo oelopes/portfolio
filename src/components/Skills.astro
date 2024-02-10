@@ -1,0 +1,85 @@
+---
+import { Icon } from 'astro-icon/components'
+import { Badge } from './ui/badge'
+
+const skills = [
+  {
+    icon: 'simple-icons:javascript',
+    title: 'Javascript',
+  },
+  {
+    icon: 'simple-icons:typescript',
+    title: 'Typescript',
+  },
+  {
+    icon: 'simple-icons:react',
+    title: 'React',
+  },
+  {
+    icon: 'simple-icons:nextdotjs',
+    title: 'Next.js',
+  },
+  {
+    icon: 'simple-icons:astro',
+    title: 'Astro.js',
+  },
+  {
+    icon: 'simple-icons:nodedotjs',
+    title: 'Node.js',
+  },
+  {
+    icon: 'simple-icons:express',
+    title: 'Express.js',
+  },
+  {
+    icon: 'simple-icons:graphql',
+    title: 'GraphQL',
+  },
+  {
+    icon: 'simple-icons:css3',
+    title: 'CSS',
+  },
+  {
+    icon: 'simple-icons:sass',
+    title: 'Sass',
+  },
+  {
+    icon: 'simple-icons:tailwindcss',
+    title: 'Tailwind',
+  },
+  {
+    icon: 'simple-icons:mongodb',
+    title: 'MongoDB',
+  },
+  {
+    icon: 'simple-icons:postgresql',
+    title: 'PostgresSQL',
+  },
+  {
+    icon: 'simple-icons:jest',
+    title: 'Jest',
+  },
+  {
+    icon: 'simple-icons:cypress',
+    title: 'Cypress',
+  },
+  {
+    icon: 'simple-icons:git',
+    title: 'Git',
+  },
+]
+---
+
+<section class="full-width bg-zinc-800 pt-10">
+  <h2 class="text-center">
+    <Badge>Tecnologias</Badge>
+  </h2>
+  <div class="flex overflow-x-auto gap-4 lg:grid lg:grid-cols-8 lg:gap-10 py-8">
+    {skills.map(skill => (
+      <div class="flex flex-col items-center min-w-24 space-y-2">
+        <Icon class="size-6 lg:size-10" name={skill.icon} />
+        <p>{skill.title}</p>
+      </div>
+    ))}
+  </div>
+</section>
