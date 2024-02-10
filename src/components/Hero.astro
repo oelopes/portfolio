@@ -7,8 +7,8 @@ import { Button } from './ui/button';
 ---
 
 <section id="hero">
-  <div class="grid grid-cols-12 gap-4 pt-36">
-    <div class="col-span-8 space-y-4">
+  <div class="grid grid-cols-12 gap-4 py-10 lg:py-0 lg:pt-40 lg:pb-20">
+    <div class="col-span-12 lg:col-span-8 space-y-4">
       <h1 class="text-5xl font-bold">Olá, Eu sou o Leonardo!</h1>
       <p>Eu sou um Engenheiro de Software, tenho 6 anos de experiência como Desenvolvedor Front-end. Tive a oportunidade de orientar e guiar alguns desenvolvedores ao longo da minha carreira e de colaborar com vários outros em diversos projetos utilizando diferentes tecnologias como JavaScript, Typescript, React, Next JS, Angular, NodeJS, PHP, GraphQL, AWS, GCP e outras. Na maior parte da minha carreira, tenho utilizado NodeJS, Typescript e React, mas estou sempre aberto a aprender novas linguagens e tecnologias.</p>
 
@@ -26,9 +26,9 @@ import { Button } from './ui/button';
         </div>
       </div>
 
-      <Button className="bg-slate-100 text-[#111] hover:bg-slate-400">Entre em contato</Button>
+      <Button className="w-full lg:w-auto bg-slate-100 text-[#111] hover:bg-slate-400">Entre em contato</Button>
     </div>
-    <div class="col-span-4">
+    <div class="hidden lg:block lg:col-span-4">
       <Picture 
         src={heroImage}
         alt="Astronaut in the air"
