@@ -1,7 +1,9 @@
 ---
-import Navbar from '@components/Navbar.astro';
-import '@styles/global.css';
 import { ViewTransitions } from 'astro:transitions';
+
+import Navbar from '@components/Navbar.astro';
+
+import '@styles/global.css';
 ---
 
 <html lang="en" transition:animate="fade">
@@ -18,7 +20,7 @@ import { ViewTransitions } from 'astro:transitions';
     <ViewTransitions />
   </head>
 
-  <body class="bg-[#111] text-slate-50 antialiased">
+  <body>
     <Navbar />
     <slot />
   </body>

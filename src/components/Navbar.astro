@@ -1,5 +1,6 @@
 ---
 import { Astronav, MenuIcon, MenuItems } from "astro-navbar";
+import { Github, Linkedin } from "lucide-react";
 import { Button } from "./ui/button";
 
 const menuitems = [
@@ -15,7 +16,7 @@ const menuitems = [
       <Astronav>
         <div class="w-full flex items-center justify-between p-4 lg:p-0">
           <a href="#hero">
-            <span class="text-3xl font-bold tracking-tight">OELOPES</span>
+            <span class="text-4xl font-bold tracking-tight">oelopes</span>
           </a>
 
           <div class="block lg:hidden">
@@ -51,6 +52,15 @@ const menuitems = [
       </Astronav>
 
       <div class="hidden lg:block px-4 text-2xl text-zinc-700">|</div>
+
+      <div class="flex items-center gap-2 pr-4">
+        <a href="https://github.com/oelopes" target="_blank">
+          <Github />
+        </a>
+        <a href="https://www.linkedin.com/in/oelopes/" target="_blank">
+          <Linkedin />
+        </a>
+      </div>
       
       <div class="hidden lg:block">
         <a target="_blank">

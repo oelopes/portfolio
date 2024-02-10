@@ -71,7 +71,8 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-[#111] text-slate-50 antialiased;
+    
   }
 }
 
@@ -103,18 +104,18 @@
 }
 
 @layer components {
-  .full-width{
-    grid-column: full-width;
-
-    display: grid;
-    grid-template-columns: inherit;
-  }
-
   .content {
     grid-column: content;
   }
 
   .breakout {
     grid-column: breakout;
+  }
+
+  .full-width{
+    grid-column: full-width;
+
+    display: grid;
+    grid-template-columns: inherit;
   }
 }
