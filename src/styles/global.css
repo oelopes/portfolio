@@ -110,6 +110,10 @@
     grid-template-columns: inherit;
   }
 
+  .content {
+    grid-column: content;
+  }
+
   .breakout {
     grid-column: breakout;
   }
