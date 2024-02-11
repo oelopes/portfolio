@@ -1,16 +1,9 @@
 ---
-import conferenciaCorpImage from '@assets/conferencia-corp-logo.png';
-import dasaImage from '@assets/dasa-logo.svg';
-import fleuryImage from '@assets/fleury-logo.png';
-import pagseguroImage from '@assets/pagseguro-logo.png';
-import piwiImage from '@assets/piwi-logo.png';
-import { Picture } from "astro:assets";
 import { Badge } from "./ui/badge";
 
 const experiences = [
   {
     year: '2023',
-    logo: piwiImage,
     type: 'Piwi',
     time: 'Remoto - 1 ano',
     positions: [
@@ -24,7 +17,6 @@ const experiences = [
   },
   {
     year: '2022',
-    logo: dasaImage,
     type: 'Dasa',
     time: 'Remoto - 1 ano e 3 meses',
     positions: [
@@ -44,7 +36,6 @@ const experiences = [
   },
   {
     year: '2021',
-    logo: fleuryImage,
     type: 'Grupo Fleury',
     time: 'Remoto - 6 meses',
     positions: [
@@ -58,7 +49,6 @@ const experiences = [
   },
   {
     year: '2021',
-    logo: pagseguroImage,
     type: 'Pagseguro',
     time: 'Híbrido - 2 anos',
     positions: [
@@ -72,8 +62,7 @@ const experiences = [
   },
   {
     year: '2019',
-    logo: conferenciaCorpImage,
-    type: 'ConferenciaCorp',
+    type: 'Streamtel',
     time: 'Presencial - 9 meses',
     positions: [
       {
@@ -100,12 +89,8 @@ const experiences = [
       </div>
       
       <div class={`flex flex-col space-y-4 mt-4 border-r lg:border-none border-slate-50 lg:absolute lg:top-20 lg:w-[500px] group-odd:right-0`}>
-        <div class="flex flex-col items-start lg:grid lg:grid-cols-[100px,_1fr] gap-4">
-          <Picture
-            class="grayscale w-full h-8" 
-            src={experience.logo}
-            alt={`${experience.type} logo`}
-          />
+        <div class="flex flex-col items-start lg:grid lg:grid-cols-[140px,_1fr] lg:gap-4">
+          <h3 class="text-3xl lg:text-2xl font-bold tracking-tighter text-center">{experience.type}</h3>
   
           <div class="lg:self-center">
             <p class="text-xl tracking-tight">{experience.time}</p>
@@ -113,7 +98,7 @@ const experiences = [
         </div>
         
         {experience.positions.map(position => (
-          <div class="lg:grid lg:grid-cols-[100px,_1fr] gap-4">
+          <div class="lg:grid lg:grid-cols-[140px,_1fr] gap-4">
             <div class="hidden lg:block size-4 mt-1 bg-zinc-400 rounded-full justify-self-center"/>
     
             <div class="space-y-4">
