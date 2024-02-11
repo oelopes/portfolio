@@ -10,7 +10,6 @@ import { Badge } from "./ui/badge";
 const experiences = [
   {
     year: '2023',
-    elementPosition: 'left',
     logo: piwiImage,
     type: 'Piwi',
     time: 'Remoto - 1 ano',
@@ -25,7 +24,6 @@ const experiences = [
   },
   {
     year: '2022',
-    elementPosition: 'right',
     logo: dasaImage,
     type: 'Dasa',
     time: 'Remoto - 1 ano e 3 meses',
@@ -46,7 +44,6 @@ const experiences = [
   },
   {
     year: '2021',
-    elementPosition: 'left',
     logo: fleuryImage,
     type: 'Grupo Fleury',
     time: 'Remoto - 6 meses',
@@ -61,7 +58,6 @@ const experiences = [
   },
   {
     year: '2021',
-    elementPosition: 'right',
     logo: pagseguroImage,
     type: 'Pagseguro',
     time: 'Híbrido - 2 anos',
@@ -76,7 +72,6 @@ const experiences = [
   },
   {
     year: '2019',
-    elementPosition: 'left',
     logo: conferenciaCorpImage,
     type: 'ConferenciaCorp',
     time: 'Presencial - 9 meses',
@@ -93,23 +88,23 @@ const experiences = [
 
 ---
 
-<section id="experience" class="full-width bg-zinc-900 py-10 space-y-10">
+<section id="experience" class="full-width bg-zinc-900 py-10 space-y-4 lg:space-y-10">
   <h2 class="text-center">
     <Badge className="bg-zinc-950 border-zinc-700">Experiência</Badge>
   </h2>
 
   {experiences.map(experience => (
-    <div class="relative lg:h-80">
+    <div class="relative lg:h-80 group">
       <div class="relative text-right lg:text-center text-4xl font-bold lg:pt-2 lg:after:content-[''] lg:after:absolute lg:after:top-12 lg:after:left-1/2 lg:after:translate-x-1/2 lg:after:h-80 lg:after:w-px lg:after:bg-slate-50">
         {experience.year}
       </div>
-  
-      <div class={`flex flex-col space-y-4 mt-4 lg:absolute lg:top-20 lg:w-[500px] ${experience.elementPosition}-0`}>
+      
+      <div class={`flex flex-col space-y-4 mt-4 border-r lg:border-none border-slate-50 lg:absolute lg:top-20 lg:w-[500px] group-odd:right-0`}>
         <div class="flex flex-col items-start lg:grid lg:grid-cols-[100px,_1fr] gap-4">
           <Picture
             class="grayscale w-full h-8" 
             src={experience.logo}
-            alt="Piwi logo"
+            alt={`${experience.type} logo`}
           />
   
           <div class="lg:self-center">
