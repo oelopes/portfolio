@@ -1,7 +1,7 @@
 import react from "@astrojs/react";
 import tailwind from "@astrojs/tailwind";
-import { defineConfig } from 'astro/config';
 import vercel from "@astrojs/vercel/serverless";
+import { defineConfig } from 'astro/config';
 
 import icon from "astro-icon";
 
@@ -9,5 +9,7 @@ import icon from "astro-icon";
 export default defineConfig({
   integrations: [tailwind(), react(), icon()],
   output: "server",
-  adapter: vercel()
+  adapter: vercel({
+    imageService: true,
+  })
 });
