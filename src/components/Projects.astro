@@ -1,0 +1,80 @@
+---
+import { Icon } from 'astro-icon/components';
+import { Picture } from 'astro:assets';
+import { ExternalLink } from 'lucide-react';
+
+import audioNotesImage from '@assets/audio-notes.jpeg';
+import portifolioImage from '@assets/portifolio.jpeg';
+import { Badge } from './ui/badge';
+
+const projects = [
+    {
+        name: "audio-notes",
+        image: audioNotesImage,
+        github_url: "https://github.com/oelopes/audio-notes",
+        description: 'Um aplicativo de notas desenvolvido para utilizar a biblioteca de reconhecimento de fala do navegador, proporcionando uma experiência intuitiva para capturar suas ideias sem a necessidade de digitar. No entanto, também está disponível a funcionalidade de digitar suas notas, oferecendo flexibilidade e adaptabilidade às suas preferências de entrada.',
+        topics: [
+            "typescript",
+            "react",
+            "vite",
+            "tailwind",
+            "speech-recognition",
+        ],
+        homepage: "https://audio-notes-xi.vercel.app",
+    },
+    {
+        name: "portfolio",
+        image: portifolioImage,
+        github_url: "https://github.com/oelopes/portfolio",
+        description: 'O website do portfólio que você está explorando neste momento é a realização de um desejo antigo que finalmente se concretizou. Ele encontra-se público no github. Portanto, sinta-se à vontade para utilizá-lo como referência para a construção do seu próprio portfólio.',
+        topics: ['typescript', 'react', 'astro', 'tailwind'],
+        homepage: "https://oelopes.dev",
+    }
+]
+---
+
+<style>
+  .project:nth-child(odd) .test{
+    @apply order-first
+  }
+</style>
+
+<section id="projects" class="py-10 space-y-8 lg:space-y-10">
+  <h2 class="text-center">
+    <Badge className="bg-zinc-950 border-zinc-700">Projetos</Badge>
+  </h2>
+
+  {projects.map(project => (
+    <div class="project grid grid-cols-1 lg:grid-cols-2 items-center lg:items-start bg-zinc-900 rounded-md overflow-hidden">
+      <Picture
+        class="bg-zinc-800 p-4 lg:p-8"
+        src={project.image}
+        alt='project'
+      />
+
+      <div class="test w-full flex flex-col gap-4 p-4 lg:p-8 ">
+        <div class="flex items-center justify-between">
+          <h3 class="text-xl font-semibold">{project.name}</h3>
+
+          <div class="flex items-center gap-4">
+            <a href={project.github_url} target="_blank">
+              <Icon size={24} name="simple-icons:github"/>
+            </a>
+  
+            <a href={project.homepage} target="_blank">
+              <ExternalLink />
+            </a>
+          </div>
+        </div>
+
+        <p>{project.description}</p>
+
+        <div class="flex flex-wrap gap-2">
+          {project.topics.map(topic => (
+            <Badge variant="secondary">{topic}</Badge>
+          ))}
+          </div>
+      </div>
+    </div>
+  ))}
+</section>
