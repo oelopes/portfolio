@@ -1,6 +1,6 @@
 ---
-import heroImage from '@assets/hero.png';
-import { Picture } from "astro:assets";
+// import heroImage from '@assets/hero.png';
+// import { Picture } from "astro:assets";
 import { MapPin } from 'lucide-react';
 
 import { Button } from './ui/button';
@@ -43,14 +43,15 @@ const { content } = Astro.props
       </a>
     </div>
     <div class="hidden lg:block lg:col-span-4 lg:col-start-9 justify-end">
-      <Picture 
-        src={heroImage}
+      <img 
+        src="/images/hero.png"
         alt="Leonardo coding"
-        widths={[200, 400, 600]}
-        sizes="(max-width: 800px) 100vw, 620px"
-        loading="eager"
-        format="avif"
       />
     </div>
   </div>
 </section>
+
+<!-- widths={[200, 400, 600]}
+sizes="(max-width: 800px) 100vw, 620px"
+loading="eager"
+format="avif" -->

@@ -13,8 +13,8 @@ module.exports = {
     },
     extend: {
       backgroundImage: {
-        br: "url('./br.png')",
-        en: "url('./en.png')"
+        br: "url('/images/br.png')",
+        en: "url('/images/en.png')"
       },
       fontFamily: {
         sans: ['Inter', 'sans-sefrif'],

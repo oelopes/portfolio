@@ -114,7 +114,7 @@
     "projects": [
       {
           "name": "audio-notes",
-          "image": "./src/assets/audio-notes.jpeg",
+          "image": "/images/audio-notes.jpeg",
           "github_url": "https://github.com/oelopes/audio-notes",
           "description": "Um aplicativo de notas desenvolvido para utilizar a biblioteca de reconhecimento de fala do navegador, proporcionando uma experiência intuitiva para capturar suas ideias sem a necessidade de digitar. No entanto, também está disponível a funcionalidade de digitar suas notas, oferecendo flexibilidade e adaptabilidade às suas preferências de entrada.",
           "topics": [
@@ -128,7 +128,7 @@
       },
       {
           "name": "portfolio",
-          "image": "./src/assets/portifolio.jpeg",
+          "image": "/images/portifolio.jpeg",
           "github_url": "https://github.com/oelopes/portfolio",
           "description": "O website do portfólio que você está explorando neste momento é a realização de um desejo antigo que finalmente se concretizou. Ele encontra-se público no github. Portanto, sinta-se à vontade para utilizá-lo como referência para a construção do seu próprio portfólio.",
           "topics": ["typescript", "react", "astro", "tailwind", "shadcn"],
