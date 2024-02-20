@@ -1,0 +1,139 @@
+{
+  "navbar": {
+    "menuitems": [
+      {
+        "title": "Tecnologias",
+        "path": "#skills"
+      },
+      {
+        "title": "Sobre",
+        "path": "#about"
+      },
+      {
+        "title": "Experiência",
+        "path": "#experience"
+      },
+      {
+        "title": "Projetos",
+        "path": "#projects"
+      }
+    ],
+    "actionButton": "Entre em contato"
+  },
+  "hero": {
+    "title": "Olá, eu sou Leonardo!",
+    "description": "Sou um Engenheiro de Software, tenho 6 anos de experiência como Desenvolvedor Front-end. Tive a oportunidade de orientar e guiar alguns desenvolvedores ao longo da minha carreira e de colaborar com vários outros em diversos projetos utilizando diferentes tecnologias.",
+    "location": "Santos - SP, Brasil",
+    "occupation": "Disponível para novos projetos",
+    "actionButton": "Entre em contato"
+  },
+  "skills": {
+    "title": "Tecnologias"
+  },
+  "about": {
+    "title": "Sobre"
+  },
+  "experiences": {
+    "title": "Experiência",
+    "experiences": [
+      {
+        "year": "2023",
+        "company": "Piwi",
+        "time": "Remoto - 1 ano",
+        "positions": [
+          {
+            "role": "Tech Lead",
+            "fromTo": "Nov 2022 - Out 2023",
+            "description": "Fui responsável por definir e desenvolver uma nova aplicação para os serviços de nossos clientes e soluções internas da equipe de back-office. Além disso, simultaneamente, mantive a aplicação legada, lidando com problemas e implementando melhorias na experiência do usuário (UX).",
+            "skills": ["Javascript", "Typescript", "React.js", "Next.js", "Node.js", "Nest.js", "MongoDB", "Jest"]
+          }
+        ]
+      },
+      {
+        "year": "2022",
+        "company": "Dasa",
+        "time": "Remoto - 1 ano e 3 meses",
+        "positions": [
+          {
+            "role": "Tech Lead",
+            "fromTo": "Jul 2022 - Nov 2022",
+            "description": "Fui responsável por liderar o crescimento pessoal e tecnológico da equipe de desenvolvimento e na definição de novos recursos com as equipes de produto.",
+            "skills": []
+          },
+          {
+            "role": "Front-end Sênior",
+            "fromTo": "Set 2021 - Jul 2022",
+            "description": "Estive encarregado do desenvolvimento de uma nova aplicação de gerenciamento de horários que fornecia informações para o aplicativo de agendamento de exames.",
+            "skills": ["Javascript", "Typescript", "React.js", "Next.js", "Node.js", "Jest"]
+          }
+        ]
+      },
+      {
+        "year": "2021",
+        "company": "Grupo Fleury",
+        "time": "Remoto - 6 meses",
+        "positions": [
+          {
+            "role": "Front-end Pleno",
+            "fromTo": "Mar 2021 - Ago 2021",
+            "description": "Desenvolvi e mantive os sites e projetos da Fleury, como Fleury, Weinmann, Felippe Mattoso, A+, A+ labs, Diagnoson, Instituto de Radiologia de Natal (IRN).",
+            "skills": ["Javascript", "Typescript", "Sass", "React.js", "Next.js", "Node.js", "Jest"]
+          }
+        ]
+      },
+      {
+        "year": "2021",
+        "company": "Pagseguro",
+        "time": "Híbrido - 2 anos",
+        "positions": [
+          {
+            "role": "Front-end Junior",
+            "fromTo": "Abr 2019 - Mar 2021",
+            "description": "Colaborei com a equipe de Inovação para criar uma plataforma social para todos os squads dentro da empresa, que posteriormente se transformou em um centro de informações detalhando máquinas, pilhas tecnológicas e projetos para cada time/departamento.",
+            "skills": ["Javascript", "Typescript", "Sass", "React.js", "Next.js", "Node.js", "MongoDB", "GraphQL"]
+          }
+        ]
+      },
+      {
+        "year": "2019",
+        "company": "Streamtel",
+        "time": "Presencial - 9 meses",
+        "positions": [
+          {
+            "role": "Front-end Junior",
+            "fromTo": "Ago 2018 - Abr 2019",
+            "description": "Desenvolvemos um serviço de videoconferência web projetado para empresas facilitarem apresentações e palestras para seus funcionários.",
+            "skills": ["Javascript", "Angular.js", "PHP", "PostgreSQL"]
+          }
+        ]
+      }
+    ]
+  },
+  "projects": {
+    "title": "Projetos",
+    "projects": [
+      {
+          "name": "audio-notes",
+          "image": "./src/assets/audio-notes.jpeg",
+          "github_url": "https://github.com/oelopes/audio-notes",
+          "description": "Um aplicativo de notas desenvolvido para utilizar a biblioteca de reconhecimento de fala do navegador, proporcionando uma experiência intuitiva para capturar suas ideias sem a necessidade de digitar. No entanto, também está disponível a funcionalidade de digitar suas notas, oferecendo flexibilidade e adaptabilidade às suas preferências de entrada.",
+          "topics": [
+              "typescript",
+              "react",
+              "vite",
+              "tailwind",
+              "speech-recognition"
+          ],
+          "homepage": "https://audio-notes-xi.vercel.app"
+      },
+      {
+          "name": "portfolio",
+          "image": "./src/assets/portifolio.jpeg",
+          "github_url": "https://github.com/oelopes/portfolio",
+          "description": "O website do portfólio que você está explorando neste momento é a realização de um desejo antigo que finalmente se concretizou. Ele encontra-se público no github. Portanto, sinta-se à vontade para utilizá-lo como referência para a construção do seu próprio portfólio.",
+          "topics": ["typescript", "react", "astro", "tailwind", "shadcn"],
+          "homepage": "https://oelopes.dev"
+      }
+    ]
+  }
+}

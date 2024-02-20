@@ -1,0 +1,21 @@
+---
+import MainLayout from '@layouts/Layout.astro';
+
+import About from '@components/About.astro';
+import Experience from '@components/Experience.astro';
+import Hero from '@components/Hero.astro';
+import Projects from '@components/Projects.astro';
+import Skills from '@components/Skills.astro';
+
+import enTranslation from '../../locales/en/translation.json';
+---
+
+<MainLayout language="en">
+	<main class="content-grid">
+		<Hero content={enTranslation.hero} />
+		<Skills content={enTranslation.skills} />
+		<About content={enTranslation.about} />
+		<Experience content={enTranslation.experiences} />
+		<Projects content={enTranslation.projects} />
+	</main>
+</MainLayout>

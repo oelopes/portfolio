@@ -3,10 +3,12 @@ import { ViewTransitions } from 'astro:transitions';
 
 import Navbar from '@components/Navbar.astro';
 
+const { language } = Astro.props
+
 import '@styles/global.css';
 ---
 
-<html lang="en" transition:animate="fade">
+<html lang={language} transition:animate="fade">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
@@ -17,11 +19,12 @@ import '@styles/global.css';
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
     <title>oelopes</title>
+    
     <ViewTransitions />
   </head>
 
   <body>
-    <Navbar />
-    <slot />
+      <Navbar />
+      <slot />
   </body>
 </html>

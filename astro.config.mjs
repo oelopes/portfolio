@@ -11,5 +11,12 @@ export default defineConfig({
   output: "server",
   adapter: vercel({
     imageService: true,
-  })
+  }),
+  i18n: {
+    defaultLocale: "br",
+    locales: ["br", "en"],
+    routing: {
+      prefixDefaultLocale: true
+    }
+  }
 });

@@ -68,14 +68,22 @@ const skills = [
     title: 'Git',
   },
 ]
+
+interface Props {
+  content: {
+    title: string
+  }
+}
+
+const { content } = Astro.props
 ---
 
 <section id="skills" class="full-width bg-zinc-900 pt-10">
   <h2 class="text-center">
-    <Badge className="bg-zinc-950 border-zinc-700">Tecnologias</Badge>
+    <Badge className="bg-zinc-950 border-zinc-700">{content.title}</Badge>
   </h2>
 
-  <div class="flex overflow-x-auto no-scrollbar gap-4 lg:grid lg:grid-cols-8 lg:gap-10 py-8">
+  <div class="flex overflow-x-auto no-scrollbar gap-6 lg:grid lg:grid-cols-8 lg:gap-10 py-8">
     {skills.map(skill => (
       <div class="flex flex-col items-center min-w-24 space-y-2">
         <Icon class="size-6 lg:size-10" name={skill.icon} />

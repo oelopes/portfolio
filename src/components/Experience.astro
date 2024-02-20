@@ -1,88 +1,32 @@
 ---
 import { Badge } from "./ui/badge";
 
-const experiences = [
-  {
-    year: '2023',
-    type: 'Piwi',
-    time: 'Remoto - 1 ano',
-    positions: [
-      {
-        role: 'Tech Lead',
-        fromTo: 'Nov 2022 - Out 2023',
-        description: 'Fui responsável por definir e desenvolver uma nova aplicação para os serviços de nossos clientes e soluções internas da equipe de back-office. Além disso, simultaneamente, mantive a aplicação legada, lidando com problemas e implementando melhorias na experiência do usuário (UX).',
-        skills: ['Javascript', 'Typescript', 'React.js', 'Next.js', 'Node.js', 'Nest.js', 'MongoDB', 'Jest']
-      }
-    ]
-  },
-  {
-    year: '2022',
-    type: 'Dasa',
-    time: 'Remoto - 1 ano e 3 meses',
-    positions: [
-      {
-        role: 'Tech Lead',
-        fromTo: 'Jul 2022 - Nov 2022',
-        description: 'Fui responsável por liderar o crescimento pessoal e tecnológico da equipe de desenvolvimento e na definição de novos recursos com as equipes de produto.',
-        skills: []
-      },
-      {
-        role: 'Front-end Sênior',
-        fromTo: 'Set 2021 - Jul 2022',
-        description: 'Estive encarregado do desenvolvimento de uma nova aplicação de gerenciamento de horários que fornecia informações para o aplicativo de agendamento de exames.',
-        skills: ['Javascript', 'Typescript', 'React.js', 'Next.js', 'Node.js', 'Jest']
-      }
-    ]
-  },
-  {
-    year: '2021',
-    type: 'Grupo Fleury',
-    time: 'Remoto - 6 meses',
-    positions: [
-      {
-        role: 'Front-end Pleno',
-        fromTo: 'Mar 2021 - Ago 2021',
-        description: 'Desenvolvi e mantive os sites e projetos da Fleury, como Fleury, Weinmann, Felippe Mattoso, A+, A+ labs, Diagnoson, Instituto de Radiologia de Natal (IRN).',
-        skills: ['Javascript', 'Typescript', 'Sass', 'React.js', 'Next.js', 'Node.js', 'Jest']
-      }
-    ]
-  },
-  {
-    year: '2021',
-    type: 'Pagseguro',
-    time: 'Híbrido - 2 anos',
-    positions: [
-      {
-        role: 'Front-end Junior',
-        fromTo: 'Abr 2019 - Mar 2021',
-        description: 'Colaborei com a equipe de Inovação para criar uma plataforma social para todos os squads dentro da empresa, que posteriormente se transformou em um centro de informações detalhando máquinas, pilhas tecnológicas e projetos para cada time/departamento.',
-        skills: ['Javascript', 'Typescript', 'Sass', 'React.js', 'Next.js', 'Node.js', 'MongoDB', 'GraphQL']
-      }
-    ]
-  },
-  {
-    year: '2019',
-    type: 'Streamtel',
-    time: 'Presencial - 9 meses',
-    positions: [
-      {
-        role: 'Front-end Junior',
-        fromTo: 'Ago 2018 - Abr 2019',
-        description: 'Desenvolvemos um serviço de videoconferência web projetado para empresas facilitarem apresentações e palestras para seus funcionários.',
-        skills: ['Javascript', 'Angular.js', 'PHP', 'PostgreSQL']
-      }
-    ]
-  },
-]
+interface Props {
+  content: {
+    title: string
+    experiences: {
+      year: string
+      company: string
+      time: string
+      positions: {
+        role: string
+        fromTo: string
+        description: string
+        skills: string[]
+      }[]
+    }[]
+  }
+}
 
+const { content } = Astro.props
 ---
 
 <section id="experience" class="full-width bg-zinc-900 py-10 space-y-4 lg:space-y-10">
   <h2 class="text-center">
-    <Badge className="bg-zinc-950 border-zinc-700">Experiência</Badge>
+    <Badge className="bg-zinc-950 border-zinc-700">{content.title}</Badge>
   </h2>
 
-  {experiences.map(experience => (
+  {content.experiences.map(experience => (
     <div class="relative lg:h-80 group">
       <div class="relative text-right lg:text-center text-4xl font-bold lg:pt-2 lg:after:content-[''] lg:after:absolute lg:after:top-12 lg:after:left-1/2 lg:after:translate-x-1/2 lg:after:h-80 lg:after:w-px lg:after:bg-slate-50">
         {experience.year}
@@ -90,7 +34,7 @@ const experiences = [
       
       <div class={`flex flex-col space-y-4 mt-4 border-r lg:border-none border-slate-50 lg:absolute lg:top-20 lg:w-[500px] group-odd:right-0`}>
         <div class="flex flex-col items-start lg:grid lg:grid-cols-[140px,_1fr] lg:gap-4">
-          <h3 class="text-3xl lg:text-2xl font-bold tracking-tighter text-center">{experience.type}</h3>
+          <h3 class="text-3xl lg:text-2xl font-bold tracking-tighter text-center">{experience.company}</h3>
   
           <div class="lg:self-center">
             <p class="text-xl tracking-tight">{experience.time}</p>
@@ -101,7 +45,7 @@ const experiences = [
           <div class="lg:grid lg:grid-cols-[140px,_1fr] gap-4">
             <div class="hidden lg:block size-4 mt-1 bg-zinc-400 rounded-full justify-self-center"/>
     
-            <div class="space-y-4">
+            <div class="space-y-4 pr-2">
               <p class="text-xl font-bold">{position.role} <span class="text-sm font-medium">({position.fromTo})</span></p>
               <p class="text-sm">{position.description}</p>
               <div class="flex flex-wrap gap-2">
