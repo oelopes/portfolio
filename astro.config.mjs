@@ -9,9 +9,7 @@ import icon from "astro-icon";
 export default defineConfig({
   integrations: [tailwind(), react(), icon()],
   output: "server",
-  adapter: vercel({
-    imageService: true,
-  }),
+  adapter: vercel(),
   i18n: {
     defaultLocale: "br",
     locales: ["br", "en"],
