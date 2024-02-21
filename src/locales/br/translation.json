@@ -131,5 +131,11 @@
           "homepage": "https://oelopes.dev"
       }
     ]
+  },
+  "footer": {
+    "firstMessage": "2024 | Design inspirado por",
+    "secondMessage": "e",
+    "thirdMessage": "codado",
+    "fourthMessage": "por Mim :)"  
   }
 }

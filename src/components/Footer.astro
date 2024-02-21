@@ -1,0 +1,24 @@
+---
+import { Copyright } from 'lucide-react';
+
+import brTranslation from '../locales/br/translation.json';
+import enTranslation from '../locales/en/translation.json';
+
+const footerTranslation = Astro.url.pathname === '/br' ? brTranslation.footer : enTranslation.footer
+---
+
+<footer>
+  <div class="p-4 flex items-center justify-center space-x-1">
+    <Copyright size="20"/>
+
+    <span>{footerTranslation.firstMessage}</span>
+
+    <a class="underline" href="https://www.figma.com/community/file/1262992249991763120" target="_blank">Sagar Shah</a>
+
+    <span>{footerTranslation.secondMessage}</span>
+
+    <a class="underline" href="https://github.com/oelopes/portfolio" target="_blank">{footerTranslation.thirdMessage}</a>
+
+    <span>{footerTranslation.fourthMessage}</span>
+  </div>
+</footer>

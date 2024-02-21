@@ -1,6 +1,7 @@
 ---
 import { ViewTransitions } from 'astro:transitions';
 
+import Footer from '@components/Footer.astro';
 import Navbar from '@components/Navbar.astro';
 
 const { language } = Astro.props
@@ -26,5 +27,6 @@ import '@styles/global.css';
   <body>
       <Navbar />
       <slot />
+      <Footer />
   </body>
 </html>
