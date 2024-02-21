@@ -124,7 +124,7 @@
       },
       {
           "name": "portfolio",
-          "image": "/images/portifolio.jpeg",
+          "image": "/images/portfolio.jpeg",
           "github_url": "https://github.com/oelopes/portfolio",
           "description": "O website do portfólio que você está explorando neste momento é a realização de um desejo antigo que finalmente se concretizou. Ele encontra-se público no github. Portanto, sinta-se à vontade para utilizá-lo como referência para a construção do seu próprio portfólio.",
           "topics": ["typescript", "react", "astro", "tailwind", "shadcn"],
