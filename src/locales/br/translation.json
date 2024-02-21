@@ -6,16 +6,12 @@
         "path": "#skills"
       },
       {
-        "title": "Sobre",
-        "path": "#about"
+        "title": "Projetos",
+        "path": "#projects"
       },
       {
         "title": "Experiência",
         "path": "#experience"
-      },
-      {
-        "title": "Projetos",
-        "path": "#projects"
       }
     ],
     "actionButton": "Entre em contato"

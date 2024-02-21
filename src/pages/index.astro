@@ -1,7 +1,7 @@
 ---
 import MainLayout from '@layouts/Layout.astro';
 
-import About from '@components/About.astro';
+// import About from '@components/About.astro';
 import Experience from '@components/Experience.astro';
 import Hero from '@components/Hero.astro';
 import Projects from '@components/Projects.astro';
@@ -14,8 +14,8 @@ import brTranslation from '../locales/br/translation.json';
 	<main class="content-grid">
 		<Hero content={brTranslation.hero} />
 		<Skills content={brTranslation.skills} />
-		<About content={brTranslation.about} />
-		<Experience content={brTranslation.experiences}/>
 		<Projects content={brTranslation.projects}/>
+		<!-- <About content={brTranslation.about} /> -->
+		<Experience content={brTranslation.experiences}/>
 	</main>
 </MainLayout>

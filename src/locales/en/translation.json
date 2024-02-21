@@ -5,17 +5,14 @@
         "title": "Tecnologies",
         "path": "#skills"
       },
+
       {
-        "title": "About",
-        "path": "#about"
+        "title": "Projects",
+        "path": "#projects"
       },
       {
         "title": "Experience",
         "path": "#experience"
-      },
-      {
-        "title": "Projects",
-        "path": "#projects"
       }
     ],
     "actionButton": "Get in touch"
