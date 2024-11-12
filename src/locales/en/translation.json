@@ -34,6 +34,19 @@
     "title": "Experience",
     "experiences": [
       {
+        "year": "2024",
+        "company": "Digitalk",
+        "time": "Remoto - Current",
+        "positions": [
+          {
+            "role": "Tech Lead",
+            "fromTo": "Apr 2024 - Current",
+            "description": "",
+            "skills": ["Javascript", "Typescript", "React.js", "Node.js", "Nest.js"]
+          }
+        ]
+      },
+      {
         "year": "2023",
         "company": "Piwi",
         "time": "Remote - 1 year",
